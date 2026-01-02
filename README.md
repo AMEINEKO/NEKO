@@ -1,7 +1,5 @@
 ﻿# NEKO
 NEKO is a transport protocol implementation derived from the Meta branch of mihomo (GPL-3.0).
-NEKO 协议所有代码均使用 AI 生成。
-
 **A quiet, resilient encrypted transport for real-world networks.**  
 **一个安静、克制、面向真实网络环境的加密传输协议。**
 
