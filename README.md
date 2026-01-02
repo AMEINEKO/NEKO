@@ -117,7 +117,7 @@ May they not be forgotten.
 
 ## Credits
 
-- Forked from [MetaCubeX/mihomo](https://github.com/MetaCubeX/mihomo)
+- Based on the Meta branch of MetaCubeX/mihomo (https://github.com/MetaCubeX/mihomo/tree/Meta)
 
 ## License
 
