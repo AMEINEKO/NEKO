@@ -1,0 +1,29 @@
+mode: rule
+log-level: info
+
+listeners:
+  - name: neko-in
+    type: neko
+    listen: 0.0.0.0
+    port: 9000
+    psk: "<psk>" # 32-byte PSK in hex or base64
+    cipher: chacha20-poly1305
+    window-size: 30
+    max-offset: 64
+    handshake-candidate-span: 1
+    replay-capacity: 8192
+    replay-windows: 4
+    shaping:
+      enabled: true
+      jitter-range: [5, 20]
+      max-frame-len: 1400
+    transport:
+      tcp-nodelay: true
+      keep-alive-secs: 0
+    fallback:
+      dest: 127.0.0.1:80
+      whitelist: []
+    proxy: DIRECT
+
+rules:
+  - MATCH,DIRECT

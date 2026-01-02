@@ -1,0 +1,25 @@
+mixed-port: 17890
+allow-lan: false
+mode: rule
+log-level: info
+
+proxies:
+  - name: neko-out
+    type: neko
+    server: "YOUR_SERVER_IP"
+    port: 9000
+    psk: "<psk>" # 32-byte PSK in hex or base64
+    cipher: chacha20-poly1305
+    udp: true
+    window-size: 30
+    max-offset: 64
+    shaping:
+      enabled: true
+      jitter-range: [5, 20]
+      max-frame-len: 1400
+    transport:
+      tcp-nodelay: true
+      keep-alive-secs: 0
+
+rules:
+  - MATCH,neko-out
